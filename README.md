@@ -1,7 +1,7 @@
 # HMStackView
 
-Modification of the great component [BSStackView](https://github.com/iBlacksus/BSStackView) 
 Now you can insert UIViewControllers instead of UIViews to the stack.
+Modification of the great component [BSStackView](https://github.com/iBlacksus/BSStackView). 
 
 Install manually by downloading the files from GitHub and then use
 ```ObjC
