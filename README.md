@@ -37,7 +37,7 @@ self.stackView.contraintsConfigurator.trailing = 10.;
 
 ## Author
 
-Modification of a great component [BSStackView](https://github.com/iBlacksus/BSStackView) created by iBlacksus, iblacksus@gmail.com
+Modification of the great component [BSStackView](https://github.com/iBlacksus/BSStackView)
 
 ## License
 
