@@ -21,7 +21,7 @@
 @property (assign, nonatomic) BOOL changeAlphaOnSendAnimation;
 @property (weak, nonatomic) id<HMStackViewProtocol> delegate;
 
-- (void)configureWithViews:(NSArray<UIViewController *> *)views;
+- (void)configureWithViewControllers:(NSArray<UIViewController *> *)views;
 
 - (void)swipe:(UISwipeGestureRecognizer *)gesture;
 

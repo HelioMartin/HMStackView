@@ -75,7 +75,7 @@ static CGFloat const HMStackViewAnimationDurationDefault = .25;
 
 #pragma mark - Public -
 
-- (void)configureWithViews:(NSArray<UIViewController *> *)views {
+- (void)configureWithViewControllers:(NSArray<UIViewController *> *)views {
     [self removeAllViews];
     
     self.views = views;
@@ -85,7 +85,6 @@ static CGFloat const HMStackViewAnimationDurationDefault = .25;
     
     NSInteger index = 0;
     for (UIViewController *vc in views) {
-        vc.view.backgroundColor = [UIColor whiteColor];
         vc.view.layer.cornerRadius = 10.;
         vc.view.layer.masksToBounds = NO;
         vc.view.layer.shadowColor = [[UIColor blackColor] colorWithAlphaComponent:0.4].CGColor;
@@ -149,7 +148,6 @@ static CGFloat const HMStackViewAnimationDurationDefault = .25;
     
     NSArray *oldConstraints = self.viewConstraints[@(vc.view.tag)];
     vc.view.alpha = [self calculateAlphaForIndex:index];
-    vc.view.backgroundColor = [UIColor colorWithWhite:[self calculateBackgroundWhiteForIndex:index] alpha:1.];
     
     NSArray *contraints = [self.contraintsConfigurator constraintsForView:vc.view index:index];
     [self removeConstraints:oldConstraints];
@@ -159,10 +157,6 @@ static CGFloat const HMStackViewAnimationDurationDefault = .25;
 
 - (CGFloat)calculateAlphaForIndex:(NSInteger)index {
     return (1. - HMStackViewMinAlpha) / self.views.count * (self.views.count - index) + HMStackViewMinAlpha;
-}
-
-- (CGFloat)calculateBackgroundWhiteForIndex:(NSInteger)index {
-    return 1.0f; // (1. - HMStackViewMinBackgroundWhite) / self.views.count * (self.views.count - index) + HMStackViewMinBackgroundWhite;
 }
 
 - (void)sendView:(UIViewController *)vc direction:(UISwipeGestureRecognizerDirection)direction {
