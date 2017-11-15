@@ -1,2 +1,2 @@
 * linguist-vendored
-HMStackView/* linguist-language=Objective-C
+HMStackView/*.m linguist-language=Objective-C
