@@ -31,7 +31,7 @@ self.stackView.contraintsConfigurator.top = 20.;
 self.stackView.contraintsConfigurator.bottom = 50.;
 self.stackView.contraintsConfigurator.leading = 10.;
 self.stackView.contraintsConfigurator.trailing = 10.;
-[self.stackView configureWithViews:views];
+[self.stackView configureWithViewControllers:viewControllers];
 ```
 
 ## Requirements
