@@ -21,7 +21,7 @@ self.stackView.swipeDirections = UISwipeGestureRecognizerDirectionLeft | UISwipe
 self.stackView.forwardDirections = UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionUp;
 self.stackView.backwardDirections = UISwipeGestureRecognizerDirectionLeft | UISwipeGestureRecognizerDirectionDown;
 self.stackView.changeAlphaOnSendAnimation = YES;
-[self.stackView configureWithViews:views];
+[self.stackView configureWithViewControllers:viewControllers];
 self.stackView.delegate = self;
 ```
 
